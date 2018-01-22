@@ -5,4 +5,10 @@
 	width: 100vw;
 	height: 100vh;
 	z-index: -100;
+	opacity: 1;
+	transition:opacity 500ms;
+}
+
+#pixi-container.hidden {
+	opacity: 0;
 }

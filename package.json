@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "jquery": "^3.2.1",
-    "scrollstory": "^1.0.0"
+    "scrollstory": "^1.0.0",
+    "pixi.js": "^4.7.0"
   }
 }
