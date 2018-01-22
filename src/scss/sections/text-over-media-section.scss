@@ -1,0 +1,41 @@
+.text-over-media-section {
+
+	header {
+		width: 100%;
+		text-align: center;
+		background-color: $dark-background-color;
+	}
+
+	h1 {
+		margin: 0 auto;
+		padding: 0 0 0.5em 0;
+		font-size: 2em;
+
+		@media screen and (min-width: $break-small) {
+			font-size: 3.4em;
+		}
+
+		@media screen and (min-width: $break-large) {
+			font-size: 4.5em;
+		}
+
+		line-height: 1.2em;
+		font-weight: 400;
+	}
+
+	p {
+		font-size: 1.2em;
+		line-height: 1.4em;
+		font-style: italic;
+		font-weight: normal;
+		letter-spacing: 1px;
+		
+		padding: 0 20px 10px;
+		margin: 0 auto;
+	}
+}
+
+.text-over-dark-image {
+	color: white;
+	// background: rgba(0,0,0,0.4);
+}

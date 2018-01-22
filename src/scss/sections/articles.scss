@@ -1,0 +1,65 @@
+.article-container {
+	position: relative;
+	
+	article {
+		padding: 20px;
+		background-color: $background-color;
+	}
+	
+	h2 {
+		font-size: 1.4rem;
+		margin: 0 0 0.8rem 0;
+
+		a {
+			color: $text-color;
+		}
+	}
+	
+	a {
+		color: #069;
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	ol, ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	.author {
+		font-family: $sans-serif-font;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 0.9rem;
+	}
+	
+
+	
+	.text-section {
+		width: 85%;
+	
+
+		@media screen and (min-width: $break-small) {
+			width: 40em;
+		}
+
+		margin: 2em auto;
+
+		transition:opacity 500ms, transform 500ms;
+
+	}
+
+	.text-section {
+		opacity: 0;
+		transform:scale(0.5);
+	}
+	
+	.text-section.inviewport, .text-section.active {
+		opacity:1;
+		transform: scale(1);
+	}
+}

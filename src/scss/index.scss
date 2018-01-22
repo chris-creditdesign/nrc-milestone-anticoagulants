@@ -1,0 +1,38 @@
+@import "includes/fonts";
+@import "includes/variables";
+
+@import "sections/articles";
+@import "sections/text-over-media-section";
+@import "sections/pixi";
+@import "sections/main-nav/main-nav-base";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background-color: #800d46;
+	color: $text-color;
+	font-family: $serif-font;
+	font-size: 17px;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+	font-weight: 700;
+}
+
+p {
+	margin: 0 0 1.3rem 0;
+	font-size: 1.1rem;
+	line-height: 1.6rem;
+}
