@@ -5,7 +5,7 @@ import Modernizr from "modernizr"
 
 import "../scss/index.scss"
 
-const app = new PIXI.Application(window.innerWidth, window.innerHeight, {backgroundColor: 0x800d46})
+const app = new PIXI.Application(window.innerWidth, window.innerHeight, {transparent: true})
 
 document.getElementById("pixi-container").appendChild(app.view)
 
