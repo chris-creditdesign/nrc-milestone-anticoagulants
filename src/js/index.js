@@ -5,7 +5,13 @@ import Modernizr from "modernizr"
 
 import "../scss/index.scss"
 
-const app = new PIXI.Application(window.innerWidth, window.innerHeight, {transparent: true})
+const app = new PIXI.Application(
+		window.innerWidth,
+		window.innerHeight,
+		{transparent: true}
+	)
+
+app.renderer.autoResize = true
 
 document.getElementById("pixi-container").appendChild(app.view)
 
@@ -27,7 +33,6 @@ if (window.innerWidth < 600) {
 	totalSprites = 30
 }
 
-
 function setup() {
 	const id = PIXI.loader.resources[imgURl].textures
 	const fileNames = Object.keys(id)
@@ -38,8 +43,11 @@ function setup() {
 
 		cell.anchor.set(0.5)
 
-		cell.x = cell.startX = Math.random() * app.screen.width
-		cell.y = cell.startY = Math.random() * app.screen.height
+		cell.xOffset = Math.random()
+		cell.yOffset = Math.random()
+
+		cell.x = cell.startX = cell.xOffset * app.screen.width
+		cell.y = cell.startY = cell.yOffset * app.screen.height
 		cell.rotation = cell.startRotation = Math.random() * Math.PI * 2
 		cell.speed = Math.random() + 0.5
 
@@ -63,12 +71,29 @@ function setup() {
 		complete: function() {
 			requestAnimationFrame(() => updateCanvas(this._percentScrollToLastItem))
 			$("#pixi-container").removeClass("hidden")
+		},
+		updateoffsets: function() {
+			resizeCanvas(this._percentScrollToLastItem)
 		}
 	})
 
 
 }
 
+function resizeCanvas(step) {
+
+	app.renderer.resize(
+		window.innerWidth,
+		window.innerHeight
+	)
+
+	cells.forEach( cell => {
+		cell.x = cell.startX = cell.xOffset * app.screen.width
+		cell.y = cell.startY = cell.yOffset * app.screen.height
+	})
+
+	updateCanvas(step)
+}
 
 function updateCanvas(step) {
 	
