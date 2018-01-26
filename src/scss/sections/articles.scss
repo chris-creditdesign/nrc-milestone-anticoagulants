@@ -53,13 +53,15 @@
 
 	}
 
-	.text-section {
-		opacity: 0;
-		transform:scale(0.5);
-	}
-	
-	.text-section.inviewport, .text-section.active {
-		opacity:1;
-		transform: scale(1);
+	@media screen and (min-width: $break-small) {
+		.text-section {
+			opacity: 0;
+			transform:scale(0.5);
+		}
+		
+		.text-section.inviewport, .text-section.active {
+			opacity:1;
+			transform: scale(1);
+		}
 	}
 }

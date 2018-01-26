@@ -19,37 +19,58 @@ const sprites = new PIXI.particles.ParticleContainer(1000, {
 
 app.stage.addChild(sprites)
 
+const imgURl = "../img/cells.json"
 let cells = []
+let totalSprites = app.renderer instanceof PIXI.WebGLRenderer ? 100 : 30
 
-const totalSprites = app.renderer instanceof PIXI.WebGLRenderer ? 200 : 10
-
-for (let i = 0; i < totalSprites; i++) {
-	
-	const cell = PIXI.Sprite.fromImage("./img/apple.png")
-	
-	cell.anchor.set(0.5)
-	
-	
-	cell.x = cell.startX = Math.random() * app.screen.width
-	cell.y = cell.startY = Math.random() * app.screen.height
-	
-	
-	cell.rotation = cell.startRotation = Math.random() * Math.PI * 2
-	
-	cell.turningSpeed = Math.random() * 4
-	
-	cell.speed = Math.random() + 0.5
-	cell.scale.set(cell.speed * 2)
-	
-	cell.offset = Math.random() * 100
-	
-	cells.push(cell)
-	
-	sprites.addChild(cell)
+if (window.innerWidth < 600) {
+	totalSprites = 30
 }
 
+
+function setup() {
+	const id = PIXI.loader.resources[imgURl].textures
+	const fileNames = Object.keys(id)
+
+	for (let i = 1; i < totalSprites; i++) {
+
+		const cell = new PIXI.Sprite(id[fileNames[randomInt(0, fileNames.length)]])
+
+		cell.anchor.set(0.5)
+
+		cell.x = cell.startX = Math.random() * app.screen.width
+		cell.y = cell.startY = Math.random() * app.screen.height
+		cell.rotation = cell.startRotation = Math.random() * Math.PI * 2
+		cell.speed = Math.random() + 0.5
+
+		if (window.innerWidth < 600) {
+			cell.scale.set(cell.speed / 2, cell.speed / 2)
+		}
+
+		cells.push(cell)
+		sprites.addChild(cell)
+	}
+
+	$('.stories').scrollStory({
+		autoActivateFirstItem: false,
+		debug: false,
+		triggerOffset: 0.5,
+		keyboard: true,
+		scrollSensitivity: 50,
+		containerscroll: function() {
+			updateCanvas(this._percentScrollToLastItem)
+		},
+		complete: function() {
+			requestAnimationFrame(() => updateCanvas(this._percentScrollToLastItem))
+			$("#pixi-container").removeClass("hidden")
+		}
+	})
+
+
+}
+
+
 function updateCanvas(step) {
-	console.log(step)
 	
 	cells.forEach( cell => {
 		
@@ -72,23 +93,14 @@ function updateCanvas(step) {
 	
 }
 
-function init() {
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-		$('.stories').scrollStory({
-			autoActivateFirstItem: false,
-			debug: false,
-			triggerOffset: 0.5,
-			keyboard: true,
-			scrollSensitivity: 50,
-			containerscroll: function() {
-				updateCanvas(this._percentScrollToLastItem)
-			},
-			complete: function() {
-				requestAnimationFrame(() => updateCanvas(this._percentScrollToLastItem))
-				$("#pixi-container").removeClass("hidden")
-			}
-		})
-		
+function init() {
+		PIXI.loader
+			.add(imgURl)
+			.load(setup)
 }
 
 $(document).ready(init)
