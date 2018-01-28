@@ -11,16 +11,14 @@ const app = new PIXI.Application(
 		{transparent: true}
 	)
 
-app.renderer.autoResize = true
+// app.renderer.autoResize = true
 
 document.getElementById("pixi-container").appendChild(app.view)
 
 const sprites = new PIXI.particles.ParticleContainer(1000, {
 	scale: true,
 	position: true,
-	rotation: true,
-	uvs: true,
-	alpha: true
+	rotation: true
 })
 
 app.stage.addChild(sprites)
@@ -81,18 +79,21 @@ function setup() {
 }
 
 function resizeCanvas(step) {
+	
+	if ((window.innerWidth !== app.screen.width) || (window.innerHeight !== app.screen.height)) {
+		app.renderer.resize(
+			window.innerWidth,
+			window.innerHeight
+		)
 
-	app.renderer.resize(
-		window.innerWidth,
-		window.innerHeight
-	)
+		cells.forEach( cell => {
+			cell.x = cell.startX = cell.xOffset * app.screen.width
+			cell.y = cell.startY = cell.yOffset * app.screen.height
+		})
 
-	cells.forEach( cell => {
-		cell.x = cell.startX = cell.xOffset * app.screen.width
-		cell.y = cell.startY = cell.yOffset * app.screen.height
-	})
+		updateCanvas(step)
+	}
 
-	updateCanvas(step)
 }
 
 function updateCanvas(step) {
