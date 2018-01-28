@@ -1,0 +1,174 @@
+{"frames": {
+
+"red-1.png":
+{
+	"frame": {"x":0,"y":1003,"w":200,"h":113},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":113},
+	"sourceSize": {"w":200,"h":113},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"red-2.png":
+{
+	"frame": {"x":0,"y":424,"w":195,"h":88},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":195,"h":88},
+	"sourceSize": {"w":195,"h":88},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"red-3.png":
+{
+	"frame": {"x":0,"y":1299,"w":150,"h":205},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":205},
+	"sourceSize": {"w":150,"h":205},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"red-4.png":
+{
+	"frame": {"x":0,"y":1116,"w":156,"h":183},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":183},
+	"sourceSize": {"w":156,"h":183},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"red-5.png":
+{
+	"frame": {"x":135,"y":789,"w":98,"h":214},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":214},
+	"sourceSize": {"w":98,"h":214},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"red-6.png":
+{
+	"frame": {"x":0,"y":597,"w":107,"h":181},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":181},
+	"sourceSize": {"w":107,"h":181},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"red-7.png":
+{
+	"frame": {"x":107,"y":597,"w":109,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":109,"h":192},
+	"sourceSize": {"w":109,"h":192},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"red-8.png":
+{
+	"frame": {"x":0,"y":512,"w":200,"h":85},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":85},
+	"sourceSize": {"w":200,"h":85},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"red-9.png":
+{
+	"frame": {"x":0,"y":789,"w":135,"h":177},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":135,"h":177},
+	"sourceSize": {"w":135,"h":177},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"red-10.png":
+{
+	"frame": {"x":0,"y":1504,"w":199,"h":187},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":199,"h":187},
+	"sourceSize": {"w":199,"h":187},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"white-1.png":
+{
+	"frame": {"x":0,"y":0,"w":99,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":99,"h":96},
+	"sourceSize": {"w":99,"h":96},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"white-2.png":
+{
+	"frame": {"x":112,"y":103,"w":107,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":106},
+	"sourceSize": {"w":107,"h":106},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"white-3.png":
+{
+	"frame": {"x":0,"y":103,"w":112,"h":101},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":112,"h":101},
+	"sourceSize": {"w":112,"h":101},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"white-4.png":
+{
+	"frame": {"x":115,"y":317,"w":119,"h":104},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":104},
+	"sourceSize": {"w":119,"h":104},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"white-5.png":
+{
+	"frame": {"x":109,"y":209,"w":107,"h":108},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":108},
+	"sourceSize": {"w":107,"h":108},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"white-6.png":
+{
+	"frame": {"x":99,"y":0,"w":106,"h":103},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":106,"h":103},
+	"sourceSize": {"w":106,"h":103},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"white-7.png":
+{
+	"frame": {"x":0,"y":209,"w":109,"h":105},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":109,"h":105},
+	"sourceSize": {"w":109,"h":105},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"white-8.png":
+{
+	"frame": {"x":0,"y":317,"w":115,"h":107},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":115,"h":107},
+	"sourceSize": {"w":115,"h":107},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "cells.png",
+	"format": "RGBA8888",
+	"size": {"w":234,"h":1691},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:d1d00434a258412a4c1f7774826a4e80:adec8f34bb54f18986fc7ac12c28edeb:bdfa88b0b7fa36b278584ce65ad02402$"
+}
+}
