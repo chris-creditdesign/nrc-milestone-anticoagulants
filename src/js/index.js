@@ -28,7 +28,7 @@ const backCellsContainer = new PIXI.particles.ParticleContainer(100, {
 const ropeContainer = new PIXI.Container()
 
 
-const imgURl = "../img/cells.json"
+const imgURl = "img/cells.json"
 let cells = []
 let totalSprites = app.renderer instanceof PIXI.WebGLRenderer ? 100 : 30
 
