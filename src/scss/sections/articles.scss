@@ -1,6 +1,6 @@
 .article-container {
 	position: relative;
-	
+
 	article {
 		padding: 20px;
 		background-color: $background-color;
@@ -39,7 +39,7 @@
 	
 
 	
-	.text-section {
+	.text-section, .video-section {
 		width: 85%;
 	
 
@@ -54,12 +54,13 @@
 	}
 
 	@media screen and (min-width: $break-small) {
-		.text-section {
+		.text-section, .video-section {
 			opacity: 0;
 			transform:scale(0.5);
 		}
 		
-		.text-section.inviewport, .text-section.active {
+		.text-section.inviewport,.text-section.active,
+		.video-section.inviewport, .video-section.active {
 			opacity:1;
 			transform: scale(1);
 		}
