@@ -37,6 +37,10 @@ const config = {
 			{
 				from: "./src/img/",
 				to: "./img/"
+			},
+			{
+				from: "./src/audio/",
+				to: "./audio/"
 			}
 		]),
 		new webpack.ProvidePlugin({

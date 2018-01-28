@@ -47,7 +47,7 @@
 	
 
 	
-	.text-section, .video-section {
+	.text-section, .video-section, .podcast-section {
 		width: 85%;
 	
 
@@ -62,13 +62,14 @@
 	}
 
 	@media screen and (min-width: $break-small) {
-		.text-section, .video-section {
+		.text-section, .video-section, .podcast-section {
 			opacity: 0;
 			transform:scale(0.5);
 		}
 		
 		.text-section.inviewport,.text-section.active,
-		.video-section.inviewport, .video-section.active {
+		.video-section.inviewport, .video-section.active,
+		.podcast-section.inviewport, .podcast-section.active {
 			opacity:1;
 			transform: scale(1);
 		}
