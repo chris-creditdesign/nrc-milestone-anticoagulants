@@ -29,6 +29,14 @@
 		padding: 0;
 		list-style: none;
 	}
+
+	.article-type {
+		font-family: $sans-serif-font;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 0.8rem;
+		margin: 0 0 0.6rem 0;
+	}
 	
 	.author {
 		font-family: $sans-serif-font;
