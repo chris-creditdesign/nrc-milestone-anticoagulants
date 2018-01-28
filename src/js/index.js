@@ -28,7 +28,7 @@ const backCellsContainer = new PIXI.particles.ParticleContainer(100, {
 const ropeContainer = new PIXI.Container()
 
 
-const imgURl = "./../img/cells.json"
+const imgURl = "img/cells.json"
 let cells = []
 let totalSprites = app.renderer instanceof PIXI.WebGLRenderer ? 100 : 30
 
@@ -41,7 +41,7 @@ function setup() {
 
 	const id = PIXI.loader.resources[imgURl].textures
 	const fileNames = Object.keys(id)
-	let horizontalTexture = PIXI.Texture.fromImage("./../img/string-horizontal.png")
+	let horizontalTexture = PIXI.Texture.fromImage("img/string-horizontal.png")
 	const ropeLength = 10
 	let horizontalPoints = []
 	for (var y = 0; y <= ropeLength; y++) {
