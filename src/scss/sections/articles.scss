@@ -61,6 +61,11 @@
 
 	}
 
+}
+
+// Only apply the transitions if JS is available and
+// we are on a larger screen
+.js .article-container {
 	@media screen and (min-width: $break-small) {
 		.text-section, .video-section, .podcast-section {
 			opacity: 0;

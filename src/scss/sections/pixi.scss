@@ -16,6 +16,8 @@
 	transition:opacity 500ms;
 }
 
-#pixi-container.hidden {
+// Only apply the transition if JS is available
+.js #pixi-container.hidden {
 	opacity: 0;
 }
+
