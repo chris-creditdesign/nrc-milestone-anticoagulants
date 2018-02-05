@@ -14,6 +14,10 @@ To create minified, autoprefixed css and js files:
 
 	npm run dist
 
+## Deploy to GitHub pages
+
+	sh gh-page-deploy.sh dist
+
 ## To do:
 
 
