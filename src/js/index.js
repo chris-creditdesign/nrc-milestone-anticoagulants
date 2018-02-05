@@ -141,20 +141,20 @@ function updateCanvas(step) {
 
 		if (cell instanceof PIXI.Sprite) {
 			if ( cell.x > app.screen.width / 2) {
-				cell.x = cell.startX + (step * (app.screen.width) * cell.speed)
+				cell.x = cell.startX + (step * (app.screen.width / 2) * cell.speed)
 			} else {
-				cell.x = cell.startX - (step * (app.screen.width) * cell.speed)
+				cell.x = cell.startX - (step * (app.screen.width / 2) * cell.speed)
 			}
 			
 			if ( cell.y > app.screen.height / 2) {
-				cell.y = cell.startY + (step * (app.screen.height) * cell.speed)
+				cell.y = cell.startY + (step * (app.screen.height / 2) * cell.speed)
 			} else {
-				cell.y = cell.startY - (step * (app.screen.height) * cell.speed)
+				cell.y = cell.startY - (step * (app.screen.height / 2) * cell.speed)
 			}
 
 			cell.rotation = cell.startRotation * (step + 1) * 2
 		} else {
-			cell.alpha = 1 - (2 * step)
+			cell.alpha = 1 - (1.25 * step)
 		}
 	})
 
