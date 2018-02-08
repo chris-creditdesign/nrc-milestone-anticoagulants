@@ -4,6 +4,7 @@
 	article {
 		padding: 20px;
 		background-color: $secondary-article-background-color;
+		box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 	}
 
 	h2 {
@@ -41,9 +42,9 @@
 	article.milestone {
 		background-color: $article-background-color;
 
-		.article-type {
-			color: $logo-color;
-		}
+		// .article-type {
+		// 	color: $logo-color;
+		// }
 	}
 
 	.date {
@@ -119,18 +120,18 @@
 
 // Only apply the transitions if JS is available and
 // we are on a larger screen
-.js .article-container {
-	@media screen and (min-width: $break-small) {
-		.text-section, .video-section, .podcast-section {
-			opacity: 0;
-			transform:scale(0.5);
-		}
+// .js .article-container {
+// 	@media screen and (min-width: $break-small) {
+// 		.text-section, .video-section, .podcast-section {
+// 			opacity: 0;
+// 			transform:scale(0.5);
+// 		}
 		
-		.text-section.inviewport,.text-section.active,
-		.video-section.inviewport, .video-section.active,
-		.podcast-section.inviewport, .podcast-section.active {
-			opacity:1;
-			transform: scale(1);
-		}
-	}
-}
+// 		.text-section.inviewport,.text-section.active,
+// 		.video-section.inviewport, .video-section.active,
+// 		.podcast-section.inviewport, .podcast-section.active {
+// 			opacity:1;
+// 			transform: scale(1);
+// 		}
+// 	}
+// }

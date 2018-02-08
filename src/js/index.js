@@ -5,7 +5,7 @@ import Modernizr from "modernizr"
 
 import "../scss/index.scss"
 
-const app = new PIXI.Application(
+/* const app = new PIXI.Application(
 		window.innerWidth,
 		window.innerHeight,
 		{transparent: true, antialias: true}
@@ -172,4 +172,4 @@ function init() {
 			.load(setup)
 }
 
-$(document).ready(init)
+$(document).ready(init)*/
