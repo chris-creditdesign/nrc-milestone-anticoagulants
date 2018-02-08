@@ -17,7 +17,7 @@
 }
 
 // Only apply the transition if JS is available
-.js #pixi-container.hidden {
+#pixi-container.hidden {
 	opacity: 0;
 }
 

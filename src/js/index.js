@@ -5,7 +5,7 @@ import Modernizr from "modernizr"
 
 import "../scss/index.scss"
 
-/* const app = new PIXI.Application(
+const app = new PIXI.Application(
 		window.innerWidth,
 		window.innerHeight,
 		{transparent: true, antialias: true}
@@ -105,6 +105,7 @@ function setup() {
 		complete: function() {
 			requestAnimationFrame(() => updateCanvas(this._percentScrollToLastItem))
 			$("#pixi-container").removeClass("hidden")
+			// $("#pixi-container").show("slow")
 		},
 		updateoffsets: function() {
 			resizeCanvas(this._percentScrollToLastItem)
@@ -140,7 +141,7 @@ function updateCanvas(step) {
 	cells.forEach( cell => {
 
 		if (cell instanceof PIXI.Sprite) {
-			if ( cell.x > app.screen.width / 2) {
+			/* if ( cell.x > app.screen.width / 2) {
 				cell.x = cell.startX + (step * (app.screen.width / 2) * cell.speed)
 			} else {
 				cell.x = cell.startX - (step * (app.screen.width / 2) * cell.speed)
@@ -152,7 +153,7 @@ function updateCanvas(step) {
 				cell.y = cell.startY - (step * (app.screen.height / 2) * cell.speed)
 			}
 
-			cell.rotation = cell.startRotation * (step + 1) * 2
+			cell.rotation = cell.startRotation * (step + 1) * 2*/
 		} else {
 			cell.alpha = 1 - (1.25 * step)
 		}
@@ -172,4 +173,4 @@ function init() {
 			.load(setup)
 }
 
-$(document).ready(init)*/
+$(document).ready(init)
