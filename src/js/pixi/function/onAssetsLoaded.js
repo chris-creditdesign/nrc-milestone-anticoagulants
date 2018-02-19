@@ -18,7 +18,7 @@ const onAssetsLoaded = function(app, resources, jsonURl, scrollstory) {
 		totalSprites = 30
 	}
 
-	Array.from(Array(totalSprites)).forEach( (elem,index,array) => {
+	Array.from({length: totalSprites}).forEach( (elem,index,array) => {
 		
 		if (index % 10 === 0) {
 			const rope = new Rope(app, textures, "rope")

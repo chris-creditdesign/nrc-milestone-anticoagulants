@@ -6,7 +6,7 @@ const Rope = function(app, textures, type) {
 	
 	const texture = textures[ Object.keys(textures).filter( d => d.includes(type)) ]
 
-	const points = Array.from(Array(ropeLength)).map( (elem, i) => {
+	const points = Array.from({length: ropeLength}, (elem, i) => {
 		return new PIXI.Point(
 						i * ((app.screen.width * 2) / ropeLength),
 						(Math.sin(i * 0.5) * 100)
