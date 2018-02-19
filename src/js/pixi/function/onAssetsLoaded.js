@@ -1,4 +1,6 @@
 import * as PIXI from 'pixi.js'
+import FastContainer from '../class/FastContainer'
+import Container from '../class/Container'
 import Cell from '../class/Cell'
 import Rope from '../class/Rope'
 import updateCanvas from './updateCanvas'
@@ -12,11 +14,32 @@ const onAssetsLoaded = function(app, resources, jsonURl, scrollstory) {
 
 	const textures = resources[jsonURl].textures
 
-	let totalSprites = app.renderer instanceof PIXI.WebGLRenderer ? 100 : 30
+	let totalSprites = 100
 
 	if (window.innerWidth < 600) {
 		totalSprites = 30
 	}
+
+	// Only use FastContainer if renderer is WebGL
+	const backContainer = app.renderer instanceof PIXI.WebGLRenderer ? 
+		new FastContainer("back")
+		: new Container("back")
+
+	const ropeContainer = new Container("rope")
+	
+	const whiteContainer = app.renderer instanceof PIXI.WebGLRenderer ? 
+		new FastContainer("white")
+		: new Container("white")
+	
+	const frontContainer = app.renderer instanceof PIXI.WebGLRenderer ?
+		new FastContainer("front")
+		: new Container("front")
+
+	app.stage.addChild(	backContainer,
+						ropeContainer,
+						whiteContainer,
+						frontContainer
+						)
 
 	Array.from({length: totalSprites}).forEach( (elem,index,array) => {
 		
@@ -39,10 +62,10 @@ const onAssetsLoaded = function(app, resources, jsonURl, scrollstory) {
 	updateCanvas(app, step)
 
 	ticker.add((deltaTime) => {
-	  alpha += 0.05
-	  alpha >= 1 ?
-	  	ticker.stop()
-	  	: app.stage.alpha = alpha
+		alpha += 0.05
+		alpha >= 1 ?
+			ticker.stop()
+			: app.stage.alpha = alpha
 	});
 
 	ticker.start();

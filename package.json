@@ -47,11 +47,12 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "d3-array": "^1.2.1",
     "d3-scale": "^2.0.0",
     "d3-selection": "^1.3.0",
     "jquery": "^3.2.1",
-    "scrollstory": "^1.0.0",
-    "pixi.js": "^4.7.0"
+    "pixi.js": "^4.7.0",
+    "scrollstory": "^1.0.0"
   }
 }

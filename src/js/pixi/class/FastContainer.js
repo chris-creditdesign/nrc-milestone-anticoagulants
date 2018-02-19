@@ -5,11 +5,11 @@ const options = {
 	position: true
 }
 
-const CellContainer = function(name) {
+const FastContainer = function(name) {
 	PIXI.particles.ParticleContainer.call(this, 100, options)
 	this.name = name
 }
 
-CellContainer.prototype = Object.create(PIXI.particles.ParticleContainer.prototype)
+FastContainer.prototype = Object.create(PIXI.particles.ParticleContainer.prototype)
 
-export default CellContainer
+export default FastContainer

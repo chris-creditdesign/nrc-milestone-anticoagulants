@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const config = {
-	entry: "./src/js/index.js",
+	entry: ["babel-polyfill", "./src/js/index.js"],
 	output: {
 		path: path.resolve(__dirname, "./dist"),
 		filename: "./js/[chunkhash:8].bundle.js"

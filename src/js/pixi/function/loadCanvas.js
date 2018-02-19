@@ -1,6 +1,4 @@
 import * as PIXI from 'pixi.js'
-import CellContainer from '../class/CellContainer'
-import RopeContainer from '../class/RopeContainer'
 import onAssetsLoaded from './onAssetsLoaded'
 
 const loadCanvas = function(scrollstory, jsonURL) {
@@ -9,12 +7,6 @@ const loadCanvas = function(scrollstory, jsonURL) {
 			window.innerHeight,
 			{transparent: true, antialias: true}
 		)
-
-	app.stage.addChild(	new CellContainer("back"), 
-						new RopeContainer("rope"),
-						new CellContainer("white"),
-						new CellContainer("front")
-						)
 
 	app.stage.alpha = 0
 

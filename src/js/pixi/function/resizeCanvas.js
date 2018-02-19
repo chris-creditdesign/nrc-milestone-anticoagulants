@@ -1,6 +1,3 @@
-import CellContainer from '../class/CellContainer'
-import RopeContainer from '../class/RopeContainer'
-
 const resizeCanvas = function(app) {
 	
 	if ((window.innerWidth !== app.screen.width) || (window.innerHeight !== app.screen.height)) {
@@ -9,7 +6,7 @@ const resizeCanvas = function(app) {
 			window.innerHeight
 		)
 
-		app.stage.children.filter( child => child instanceof CellContainer )
+		app.stage.children.filter( child => child.name === "back" || child.name === "front" || child.name === "white" )
 			.forEach( elem => {
 				elem.children.forEach( cell => {
 					cell.x = cell.xOffset * app.screen.width
@@ -21,7 +18,7 @@ const resizeCanvas = function(app) {
 				})
 			})
 
-		app.stage.children.filter( child => child instanceof RopeContainer )
+		app.stage.children.filter( child => child.name === "rope" )
 			.forEach( elem => {
 				elem.children.forEach( rope => {
 					rope.points.forEach( (point, i, array) => {
