@@ -11,9 +11,6 @@ const updateCanvas = function(app, step) {
 		})
 	})
 
-
-
-
 }
 
 export default updateCanvas
