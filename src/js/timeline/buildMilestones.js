@@ -1,14 +1,13 @@
-function addRects(selection, timeline) {
+function addMilestones(selection, timeline) {
 	selection
 		.exit().remove()
 
 	selection
 		.enter()
-	  .append("rect")
-		.attr("x", 0)
-		.attr("y", d => timeline.timeScale(d.start))
-		.attr("width", timeline.width)
-		.attr("height", 10)
+	  .append("circle")
+		.attr("cx", timeline.width / 2)
+		.attr("cy", d => timeline.timeScale(d.start))
+		.attr("r", timeline.width / 8)
 		.on("click", d => window.location.href = window.location.origin + `#milestone-${d.number}`)
 	  .append("title")
 		.text( d => `Milestone ${d.number}`)
@@ -16,13 +15,13 @@ function addRects(selection, timeline) {
 
 const buildMilestones = function(index) {
 
-	this.milestoneContainer.selectAll("rect")
+	this.milestoneContainer.selectAll("circle")
 		.data(this.data.filter((d,i) => i !== index), d => d.start)
-		.call(addRects, this)
+		.call(addMilestones, this)
 
-	this.activeMilestoneContainer.selectAll("rect")
+	this.activeMilestoneContainer.selectAll("circle")
 		.data(this.data.filter((d,i) => i === index), d => d.start)
-		.call(addRects, this)
+		.call(addMilestones, this)
 
 	return this
 }

@@ -6,8 +6,8 @@
 	top: 0;
 	background-color: #ececec;
 
-	svg .milestoneContainer rect,
-	svg .activeMilestoneContainer rect {
+	svg .milestoneContainer circle,
+	svg .activeMilestoneContainer circle {
 		fill: cornflowerblue;
 		cursor: pointer;
 		transition: fill 300ms ease-in-out;
@@ -17,7 +17,7 @@
 		}
 	}
 
-	svg .activeMilestoneContainer rect {
+	svg .activeMilestoneContainer circle {
 		fill: hotpink;
 	}
 }
