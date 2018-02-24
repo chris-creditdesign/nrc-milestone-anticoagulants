@@ -1,4 +1,6 @@
 const buildOptions = (data) => {
+
+
 	const options = {}
 
 	options.totalWidth = data && data.width || 120;
@@ -8,6 +10,7 @@ const buildOptions = (data) => {
 	options.height = options.totalHeight - options.margins.top - options.margins.bottom;
 	options.data = data && data.data || [],
 	options.target = data && data.target || "body";
+	options.tooltip = $("#tooltip")
 
 	return options
 }

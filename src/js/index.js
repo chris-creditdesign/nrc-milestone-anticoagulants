@@ -22,7 +22,9 @@ function complete() {
 
 	const data = this._items.map( (elem,index) => {
 		return {
-			start: elem.data.start,
+			start: parseInt(elem.data.start, 10),
+			end: parseInt(elem.data.end, 10),
+			title: elem.el.find("h2").eq(0)[0].innerText,
 			number: index + 1
 		}
 	})
