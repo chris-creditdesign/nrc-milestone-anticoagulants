@@ -1,6 +1,7 @@
 import buildSvg from './buildSvg'
 import buildScales from './buildScales'
 import buildAxis from './buildAxis'
+import buildLine from './buildLine'
 import buildMilestones from './buildMilestones'
 
 const Widget = (options) => {
@@ -9,6 +10,7 @@ const Widget = (options) => {
 			buildSvg,
 			buildScales,
 			buildAxis,
+			buildLine,
 			buildMilestones,
 			options
 		)

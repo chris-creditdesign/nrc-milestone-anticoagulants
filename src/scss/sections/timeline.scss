@@ -1,7 +1,7 @@
 #timeline-container {
 	height: 100%;
 	position: fixed;
-	width: 150px;
+	width: 120px;
 	left: 0;
 	top: 0;
 	background-color: rgba(200,200,200,0.5);
@@ -15,7 +15,7 @@
 		transition: fill 300ms ease-in-out;
 		
 		&:hover {
-			fill: #63063f;
+			fill: #c40226;
 		}
 	}
 
@@ -23,12 +23,19 @@
 		fill: #c40226;
 	}
 
-	svg .axisContainer text {
-		font-family: $sans-serif-font;
-		font-weight: bold;
-		text-anchor: start;
-		fill: #fff;
-	}
+	svg .axisContainer {
+		text {
+			font-family: $sans-serif-font;
+			font-weight: bold;
+			text-anchor: start;
+			fill: #fff;
+		}
+
+		line {
+			stroke-width: 2px;
+			stroke: #fff;
+		}	
+	} 
 
 	svg .axisContainer rect {
 		fill: $dark-background-color;

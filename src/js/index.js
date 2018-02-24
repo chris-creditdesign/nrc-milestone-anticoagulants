@@ -39,6 +39,7 @@ function complete() {
 	timeline = Widget(options)
 		.buildSvg()
 		.buildScales()
+		.buildLine()
 		.buildAxis()
 		.buildMilestones()
 

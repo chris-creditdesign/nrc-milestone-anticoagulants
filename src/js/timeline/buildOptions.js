@@ -1,7 +1,7 @@
 const buildOptions = (data) => {
 	const options = {}
 
-	options.totalWidth = data && data.width || 150;
+	options.totalWidth = data && data.width || 120;
 	options.totalHeight = data && data.height || window.innerHeight;
 	options.margins = data && data.margins || {'top': 40, 'left': 10, 'bottom': 10, 'right': 10};
 	options.width = options.totalWidth - options.margins.left - options.margins.right;
