@@ -36,12 +36,15 @@ function complete() {
 		data
 	})
 
-	timeline = Widget(options)
-		.buildSvg()
-		.buildScales()
-		.buildLine()
-		.buildAxis()
-		.buildMilestones()
+	
+	if (window.innerWidth >= 1000) {
+		timeline = Widget(options)
+			.buildSvg()
+			.buildScales()
+			.buildLine()
+			.buildAxis()
+			.buildMilestones()
+	}
 
 }
 
@@ -57,11 +60,12 @@ function init() {
 			updateCanvas(app, this._percentScrollToLastItem)
 		},
 		itemfocus: function(ev, item) {
-			timeline.buildMilestones(item.index)
+			timeline && timeline.buildMilestones(item.index)
 		},
 		complete: complete,
 		updateoffsets: function() {
 			app && resizeCanvas(app)
+			timeline && timeline.updateSvg()
 		}
 	})
 }

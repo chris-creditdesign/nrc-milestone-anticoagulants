@@ -4,8 +4,16 @@
 	width: 120px;
 	left: 0;
 	top: 0;
-	background-color: rgba(200,200,200,0.5);
+	display: none;
+
+	@media screen and (min-width: $break-large) {
+		display: block;
+	}
 	
+	svg {
+		background-color: rgba(200,200,200,0.5);
+	}
+
 	svg .milestoneContainer circle,
 	svg .activeMilestoneContainer circle {
 		fill: $dark-background-color;

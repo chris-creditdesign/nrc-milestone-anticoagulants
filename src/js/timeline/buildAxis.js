@@ -2,16 +2,6 @@ const buildAxis = function() {
 
 	const textPadding = 5
 
-	// this.axisContainer.selectAll("line")
-	// 	.data(this.data.decades)
-	// 	.enter()
-	//   .append("line")
-	// 	.attr("stroke", "#000000")
-	// 	.attr("x1", 0)
-	// 	.attr("y1", d => this.timeScale(d))
-	// 	.attr("x2", this.width)
-	// 	.attr("y2", d => this.timeScale(d))
-
 	const textLabels = this.axisContainer.selectAll("g")
 		.data(this.data.decades)
 		.enter()

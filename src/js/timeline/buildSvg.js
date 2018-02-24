@@ -1,6 +1,7 @@
 import { select } from 'd3-selection'
 
 const buildSvg = function() {
+
 		this.svg = select(this.target).append("svg")
 			.attr("class", "timeline")
 			.attr("width", this.totalWidth)
