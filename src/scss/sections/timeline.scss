@@ -6,13 +6,18 @@
 	top: 0;
 	background-color: #ececec;
 
-	svg .milestone {
+	svg .milestoneContainer rect,
+	svg .activeMilestoneContainer rect {
 		fill: cornflowerblue;
 		cursor: pointer;
-		transition: fill 100ms ease-in-out;
+		transition: fill 300ms ease-in-out;
 		
 		&:hover {
 			fill: green;
 		}
+	}
+
+	svg .activeMilestoneContainer rect {
+		fill: hotpink;
 	}
 }

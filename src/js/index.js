@@ -20,7 +20,12 @@ function complete() {
 	app = loadCanvas(this, jsonURL)
 	document.getElementById("pixi-container").appendChild(app.view)
 
-	const data = this._items.map( elem => { return {start: elem.data.start} })
+	const data = this._items.map( (elem,index) => {
+		return {
+			start: elem.data.start,
+			number: index + 1
+		}
+	})
 
 	data.startYear = 1910
 	data.endYear = 2025
@@ -43,15 +48,15 @@ function init() {
 
 	$('.stories').scrollStory({
 		autoActivateFirstItem: false,
-		debug: false,
-		triggerOffset: 0.5,
+		debug: true,
+		triggerOffset: 50,
 		keyboard: true,
 		scrollSensitivity: 50,
 		containerscroll: function() {
 			updateCanvas(app, this._percentScrollToLastItem)
 		},
 		itemfocus: function(ev, item) {
-			console.log(item.index)
+			timeline.buildMilestones(item.index)
 		},
 		complete: complete,
 		updateoffsets: function() {

@@ -14,6 +14,10 @@ const buildSvg = function() {
 			.attr("class", "milestoneContainer")
 			.attr("transform", `translate(${this.margins.left},${this.margins.top})`)
 
+		this.activeMilestoneContainer = this.svg.append("g")
+			.attr("class", "activeMilestoneContainer")
+			.attr("transform", `translate(${this.margins.left},${this.margins.top})`)
+
 		return this
 	}
 

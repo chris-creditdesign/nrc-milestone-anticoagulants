@@ -5,11 +5,11 @@ import buildMilestones from './buildMilestones'
 
 const Widget = (options) => {
 	return Object.assign(
-			{}, 
-			buildSvg, 
-			buildScales, 
+			{},
+			buildSvg,
+			buildScales,
 			buildAxis,
-			buildMilestones, 
+			buildMilestones,
 			options
 		)
 }
