@@ -48,7 +48,7 @@ function init() {
 
 	$('.stories').scrollStory({
 		autoActivateFirstItem: false,
-		debug: true,
+		debug: false,
 		triggerOffset: 50,
 		keyboard: true,
 		scrollSensitivity: 50,
