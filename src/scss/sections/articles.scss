@@ -6,11 +6,54 @@
 		padding: 20px;
 		background-color: $secondary-article-background-color;
 		box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+
+		width: 85%;
+		margin: 2em auto 2em;
+	
+
+		@media screen and (min-width: $break-small) {
+			width: 30em;
+			margin: 2em auto 6em;
+		}
+
+		@media screen and (min-width: $break-large) {
+			width: 40em;
+		}
+
+
+		&.related-content {
+			margin: 1.5em 0 0.5em;
+			width: 100%;
+			box-shadow: none;
+			font-family: $sans-serif-font;
+
+			h2 {
+				font-size: 1.2em;
+				margin: 0 0 1rem 0;
+			}
+			
+			p {
+			}
+
+			.article-type {
+				color: $light-text-color;
+				margin: 0 0 0.2rem 0;
+
+				&:before {
+					content: none;
+				}
+			}
+		}
 	}
 
 	h2 {
 		font-size: 1.4rem;
 		margin: 0 0 1rem 0;
+
+		@media screen and (min-width: $break-tiny) {
+			font-size: 1.6rem;
+			margin: 0 0 1.6rem 0;
+		}
 
 		a {
 			color: $text-color;
@@ -34,18 +77,28 @@
 
 	.article-type {
 		font-family: $sans-serif-font;
+		color: $light-text-color;
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 0.9rem;
 		margin: 0 0 0.6rem 0;
+		position: relative;
+		margin-left: 15px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: $light-text-color;
+			top: 0.5em;
+			left: -15px;
+			border-radius: 5px;
+		}
 	}
 
 	article.milestone {
 		background-color: $article-background-color;
-
-		// .article-type {
-		// 	color: $logo-color;
-		// }
 	}
 
 	.date {
@@ -70,20 +123,7 @@
 	}
 	
 	.text-section, .video-section, .podcast-section {
-		width: 85%;
-	
 
-		@media screen and (min-width: $break-small) {
-			width: 30em;
-		}
-
-		@media screen and (min-width: $break-large) {
-			width: 40em;
-		}
-
-		margin: 2em auto;
-
-		transition:opacity 500ms, transform 500ms;
 
 	}
 
@@ -122,21 +162,3 @@
 	}
 
 }
-
-// Only apply the transitions if JS is available and
-// we are on a larger screen
-// .js .article-container {
-// 	@media screen and (min-width: $break-small) {
-// 		.text-section, .video-section, .podcast-section {
-// 			opacity: 0;
-// 			transform:scale(0.5);
-// 		}
-		
-// 		.text-section.inviewport,.text-section.active,
-// 		.video-section.inviewport, .video-section.active,
-// 		.podcast-section.inviewport, .podcast-section.active {
-// 			opacity:1;
-// 			transform: scale(1);
-// 		}
-// 	}
-// }
