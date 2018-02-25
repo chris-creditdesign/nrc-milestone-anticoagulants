@@ -11,6 +11,7 @@ const buildOptions = (data) => {
 	options.data = data && data.data || [],
 	options.target = data && data.target || "body";
 	options.tooltip = $("#tooltip")
+	options.scrollStory = data && data.scrollStory || undefined
 
 	return options
 }

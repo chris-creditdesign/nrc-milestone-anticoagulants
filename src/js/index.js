@@ -35,18 +35,19 @@ function complete() {
 
 	const options = buildOptions( { 
 		target: "#timeline-container",
+		scrollStory: this,
 		data
 	})
 
 	
-	// if (window.innerWidth >= 1000) {
+	if (window.innerWidth >= 800) {
 		timeline = Widget(options)
 			.buildSvg()
 			.buildScales()
 			.buildLine()
 			.buildAxis()
 			.buildMilestones()
-	// }
+	}
 
 }
 
@@ -56,6 +57,7 @@ function init() {
 		autoActivateFirstItem: false,
 		debug: false,
 		triggerOffset: 50,
+		scrollOffset: 50,
 		keyboard: true,
 		scrollSensitivity: 50,
 		containerscroll: function() {

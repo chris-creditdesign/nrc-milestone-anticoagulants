@@ -8,9 +8,10 @@ function addMilestones(selection, timeline) {
 		.attr("cx", timeline.width * 0.75)
 		.attr("cy", d => timeline.timeScale(d.start))
 		.attr("r", timeline.width / 10)
-		.on("click", d => window.location.href = window.location.origin + `#milestone-${d.number}`)
+		.on("click", (d) => {
+			timeline.scrollStory.setActiveItem(timeline.scrollStory._items[d.number - 1])
+		})
 		.on("mouseenter", (d) => {
-			console.log(d)
 			timeline.tooltip
 				.find("#tooltip-title")
 				.text(d.title)
