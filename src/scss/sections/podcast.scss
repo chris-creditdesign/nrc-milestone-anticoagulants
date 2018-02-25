@@ -1,9 +1,32 @@
 .podcast-section {
-	audio {
-		width: 100%
-	}
 
-	p {
+	.audio-flex-container {
 		margin: 20px 0 0 0;
 	}
+
+	@media screen and (min-width: $break-tiny) {
+		display: flex;
+		flex-flow: wrap;
+		flex-direction: row;
+
+		.audio-flex-container {
+			flex: 2 100%;
+			margin: 10px 0 0 0;
+		}
+
+		.text-flex-container {
+			flex: 1 85%;
+		}
+
+		.image-flex-container {
+			padding-right: 20px;
+			flex: 1 10%;
+
+		}
+	}
+
+	audio {
+		width: 100%;
+	}
+
 }
