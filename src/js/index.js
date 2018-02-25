@@ -39,14 +39,14 @@ function complete() {
 	})
 
 	
-	if (window.innerWidth >= 1000) {
+	// if (window.innerWidth >= 1000) {
 		timeline = Widget(options)
 			.buildSvg()
 			.buildScales()
 			.buildLine()
 			.buildAxis()
 			.buildMilestones()
-	}
+	// }
 
 }
 

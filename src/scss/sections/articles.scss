@@ -74,6 +74,10 @@
 	
 
 		@media screen and (min-width: $break-small) {
+			width: 30em;
+		}
+
+		@media screen and (min-width: $break-large) {
 			width: 40em;
 		}
 
