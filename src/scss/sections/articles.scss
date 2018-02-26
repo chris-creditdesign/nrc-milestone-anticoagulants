@@ -80,11 +80,15 @@
 		color: $light-text-color;
 	}
 	
-	.author {
+	ul.author {
 		font-family: $sans-serif-font;
 		text-transform: uppercase;
 		font-weight: 600;
 		font-size: 0.8rem;
+
+		li {
+			display: inline;
+		}
 	}
 
 	.credit {
