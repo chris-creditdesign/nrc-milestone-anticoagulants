@@ -2,6 +2,11 @@
 	position: relative;
 	margin-bottom: 50vh;
 
+	background-image: linear-gradient($article-background-color, $article-background-color);
+	background-size: 10px 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+
 	article {
 		padding: 20px;
 		background-color: $secondary-article-background-color;
