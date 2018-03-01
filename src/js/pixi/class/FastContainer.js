@@ -2,7 +2,8 @@ import * as PIXI from 'pixi.js'
 
 const options = {
 	scale: true,
-	position: true
+	position: true,
+	rotation: true
 }
 
 const FastContainer = function(name) {

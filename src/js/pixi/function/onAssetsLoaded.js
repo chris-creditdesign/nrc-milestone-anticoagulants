@@ -6,8 +6,6 @@ import Rope from '../class/Rope'
 import updateCanvas from './updateCanvas'
 
 const onAssetsLoaded = function(app, resources, jsonURl, scrollstory) {
-
-	const step = scrollstory._percentScrollToLastItem
 	
 	const ticker = new PIXI.ticker.Ticker()
 	let alpha = 0
@@ -59,7 +57,7 @@ const onAssetsLoaded = function(app, resources, jsonURl, scrollstory) {
 		}
 	})
 
-	updateCanvas(app, step)
+	updateCanvas(app, scrollstory)
 
 	ticker.add((deltaTime) => {
 		alpha += 0.05

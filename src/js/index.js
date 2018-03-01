@@ -17,8 +17,18 @@ let app
 let timeline
 
 function complete() {
+	this.animationActive = false
+
 	app = loadCanvas(this, jsonURL)
 	document.getElementById("pixi-container").appendChild(app.view)
+
+	const checkbox = $("#animation-control").find("input")
+
+	checkbox.change(() => {
+		this.animationActive = checkbox.prop("checked")
+		updateCanvas(app, this)
+	})
+
 
 	const data = this._items.map( (elem,index) => {
 		return {
@@ -39,7 +49,6 @@ function complete() {
 		data
 	})
 
-	
 	if (window.innerWidth >= 800) {
 		timeline = Widget(options)
 			.buildSvg()
@@ -61,7 +70,7 @@ function init() {
 		keyboard: true,
 		scrollSensitivity: 50,
 		containerscroll: function() {
-			updateCanvas(app, this._percentScrollToLastItem)
+			updateCanvas(app, this)
 		},
 		itemfocus: function(ev, item) {
 			timeline && timeline.buildMilestones(item.index)
@@ -69,6 +78,7 @@ function init() {
 		complete: complete,
 		updateoffsets: function() {
 			app && resizeCanvas(app)
+			app && updateCanvas(app, this)
 			timeline && timeline.updateSvg()
 		}
 	})

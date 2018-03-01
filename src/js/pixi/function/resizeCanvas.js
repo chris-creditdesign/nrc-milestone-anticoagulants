@@ -9,11 +9,14 @@ const resizeCanvas = function(app) {
 		app.stage.children.filter( child => child.name === "back" || child.name === "front" || child.name === "white" )
 			.forEach( elem => {
 				elem.children.forEach( cell => {
-					cell.x = cell.xOffset * app.screen.width
-					cell.y = cell.yOffset * app.screen.height
+					// cell.x = cell.xOffset * app.screen.width
+					// cell.y = cell.yOffset * app.screen.height
 
-					window.innerWidth < 600 ? 
-						cell.scale.set(0.5,0.5)
+					cell.startX = cell.xOffset * app.screen.width
+					cell.startY = cell.yOffset * app.screen.height
+
+					window.innerWidth < 600 ?
+						cell.scale.set(cell.scaleOffset, cell.scaleOffset)
 						: cell.scale.set(1,1)
 				})
 			})

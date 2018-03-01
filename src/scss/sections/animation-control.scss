@@ -1,0 +1,27 @@
+#animation-control {
+	width: 140px;
+	background: rgba(200, 200, 200, 0.8);
+	display: inline-block;
+	position: fixed;
+	padding: 10px;
+	top: 0;
+	right: 0;
+	color: #000;
+	font-family: $sans-serif-font;
+
+	label,input {
+		cursor: pointer;
+	}
+
+	label {
+		margin-left: 10px;
+	}
+
+	display: none;
+
+	@media screen and (min-width: $break-small) {
+		display: flex;
+		align-items: center;
+	}
+
+}
