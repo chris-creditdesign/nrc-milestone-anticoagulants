@@ -7,8 +7,9 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const config = {
 	entry: ["babel-polyfill", "./src/js/index.js"],
 	output: {
-		path: path.resolve(__dirname, "./dist"),
-		filename: "./js/[chunkhash:8].bundle.js"
+		filename: "./js/[name].[chunkhash:8].bundle.js",
+		chunkFilename: './js/[name].[chunkhash:8].bundle.js',
+		path: path.resolve(__dirname, "./dist")
 	},
 	module: {
 		rules: [
