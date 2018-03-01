@@ -6,12 +6,26 @@
 	<title>Nature Reviews Cardiology Milestone Anticoagulants</title>
 
 	<style>
-		.no-js #pixi-container.hidden {
-			background-image: url("img/anticoagulants-cover-cells-final.jpg");
-			background-size: cover;
+		.js body {
+			background-image: none;
+		}
+
+		.js #pixi-container {
+			display: block;
+		}
+
+		@media screen and (max-width: 600px) {
+			.js body {
+				background-image: url("img/anticoagulants-cover-cells-final.jpg");
+				background-size: cover;
+			}
+
+			.js #pixi-container {
+				display: none;
+			}
 		}
 	</style>
-<link href="./css/fca53559.style.css" rel="stylesheet"></head>
+<link href="./css/37c059ab.style.css" rel="stylesheet"></head>
 <body>
 
 	<div id="pixi-container"></div>
@@ -632,5 +646,5 @@
 		</div>
 	</div>
 
-<script type="text/javascript" src="./js/fca53559.bundle.js"></script></body>
+<script type="text/javascript" src="./js/main.37c059ab.bundle.js"></script></body>
 </html>
