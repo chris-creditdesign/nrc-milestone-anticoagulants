@@ -146,9 +146,6 @@
 	}
 
 	.related-content {
-		margin: 1.5em 0 0.5em;
-		width: 100%;
-		box-shadow: none;
 		font-family: $sans-serif-font;
 
 		h2 {
@@ -167,6 +164,14 @@
 				content: none;
 			}
 		}
+	}
+
+	// For a related article that is not inside a milestone
+	// such as the Nobel Prize 
+	article .related-content {
+		margin: 1.5em 0 0.5em;
+		width: 100%;
+		box-shadow: none;
 	}
 
 	.related-content.with-image {

@@ -18,7 +18,7 @@ function addMilestones(selection, timeline) {
 
 			timeline.tooltip
 				.find("#tooltip-tag")
-				.text(`Milestone ${d.number} (${d.start}${d.end ? `-${d.end}`: ""})`)
+				.text(`${d.name} (${d.start}${d.end ? `-${d.end}`: ""})`)
 
 			timeline.tooltip.css("top", timeline.timeScale(d.start) + timeline.margins.top - (timeline.tooltip.outerHeight() / 2))
 				.show()
