@@ -1,0 +1,45 @@
+footer.text-section {
+	font-family: $sans-serif-font;
+	margin-bottom: 60px;
+	padding-bottom: 100px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 2px 2px 5px #000;
+
+	.sn-logo {
+		width: 140px;
+		margin: 0;
+
+		fill:#ffffff;
+	}
+
+	.footerlinks {
+		list-style: none;
+		padding: 0;
+
+		li {
+			display: block;
+		}
+
+		@media screen and (min-width: $break-large) {
+			li {
+				display: inline-block;
+				margin-right: 10px;
+			}	
+		}
+
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	small {
+		font-size: 0.8rem;
+	}
+}
