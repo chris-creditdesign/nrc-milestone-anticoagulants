@@ -59,6 +59,7 @@ function complete() {
 }
 
 function init() {
+	const timelineContainer = $("#timeline-container")
 
 	$('.stories').scrollStory({
 		autoActivateFirstItem: false,
@@ -78,7 +79,13 @@ function init() {
 			app && resizeCanvas(app)
 			app && updateCanvas(app, this)
 			timeline && timeline.updateSvg()
-		}
+		},
+		containeractive: function() {
+			timelineContainer.removeClass("scrollstoryInactive")
+  		},
+  		containerinactive: function() {
+			timelineContainer.addClass("scrollstoryInactive")
+  		}
 	})
 }
 

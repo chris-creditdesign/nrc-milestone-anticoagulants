@@ -2,10 +2,14 @@
 	position: relative;
 	margin-bottom: 50vh;
 
+	@media screen and (min-width: $break-small) {
+		padding-top: 50px;
+	}
+
 	background-image: linear-gradient($article-background-color, $article-background-color);
 	background-size: 10px 100%;
 	background-repeat: no-repeat;
-	background-position: 50% 0;
+	background-position: 50% 50px;
 
 	article {
 		padding: 20px;
@@ -18,7 +22,7 @@
 
 		@media screen and (min-width: $break-small) {
 			width: 30em;
-			margin: 2em auto 3em;
+			margin: 0 auto 5em;
 		}
 
 		@media screen and (min-width: $break-large) {

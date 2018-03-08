@@ -6,6 +6,9 @@
 	top: 0;
 	display: none;
 
+	transform: translateX(0px);
+	transition: transform 300ms ease-in-out;
+
 	@media screen and (min-width: $break-small) {
 		display: block;
 	}
@@ -84,4 +87,8 @@
 		
 	}
 
+}
+
+#timeline-container.scrollstoryInactive {
+	transform: translateX(-120px);
 }

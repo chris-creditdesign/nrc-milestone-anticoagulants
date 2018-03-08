@@ -1,6 +1,8 @@
 @import "includes/fonts";
 @import "includes/variables";
 
+@import "main-nav/main-nav";
+
 @import "sections/articles";
 @import "sections/video";
 @import "sections/podcast";
@@ -38,4 +40,13 @@ p {
 	margin: 0 0 0.8rem 0;
 	font-size: 1.1rem;
 	line-height: 1.6rem;
+}
+
+.svg {
+	.visually-hidden {
+		width: 1px;
+		height: 1px;
+		position: absolute!important;
+		clip: rect(1px,1px,1px,1px);
+	}
 }
