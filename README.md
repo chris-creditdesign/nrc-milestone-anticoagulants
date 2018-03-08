@@ -1,11 +1,5 @@
 # Enhanced presentation for Nature Reviews Cardiology Milestone Anticoagulants
 
-To be added to [Anticoagulants Milestone](https://www.nature.com/collections/hbcnxgwklt) as: 
-
-	<iframe src="https://chris-creditdesign.github.io/nrc-milestone-anticoagulants/index.html" title="Nature Reviews Cardiology Milestone Anticoagulants Timeline" style="width: 100%; height: 800px; border: none;">
-	  <p>Your browser does not support iframes.</p>
-	</iframe>
-
 ## Install [webpack](https://webpack.js.org/) and dependencies:
 
 	npm install
@@ -23,6 +17,10 @@ To create minified, autoprefixed css and js files:
 ## Deploy to GitHub pages
 
 	sh gh-page-deploy.sh dist
+
+## Log git commits with date and description
+
+	git log --pretty=format:"%ad%x09%s"
 
 ## To do:
 
