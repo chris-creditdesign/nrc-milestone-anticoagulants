@@ -1,16 +1,29 @@
 footer.text-section {
 	font-family: $sans-serif-font;
-	margin-bottom: 60px;
-	padding-bottom: 100px;
-	color: #ffffff;
-	text-align: center;
-	text-shadow: 2px 2px 5px #000;
+	// text-align: center;
+
+	padding: 20px;
+	background-color: $article-background-color;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+
+	width: 85%;
+	margin: 2em auto 2em;
+
+
+	@media screen and (min-width: $break-small) {
+		width: 30em;
+		margin: 0 auto 5em;
+	}
+
+	@media screen and (min-width: $break-large) {
+		width: 40em;
+	}
 
 	.sn-logo {
 		width: 140px;
-		margin: 0;
+		margin: 0 0 10px 0;
 
-		fill:#ffffff;
+		fill:#4E4E4E
 	}
 
 	.footerlinks {
@@ -31,7 +44,7 @@ footer.text-section {
 	}
 
 	a {
-		color: white;
+		color: #069;
 		text-decoration: none;
 
 		&:hover {
