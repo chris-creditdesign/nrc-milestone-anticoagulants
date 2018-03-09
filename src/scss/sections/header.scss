@@ -9,7 +9,6 @@ header.main {
 	.container {
 		padding: 10px 7.5% 15px;
 		background-color: $dark-background-color;
-		font-size: 0.8em;
 		flex-direction: column;
 		align-items: flex-start;
 
@@ -21,7 +20,7 @@ header.main {
 	}
 
 	.title {
-		font-size: 0.9em;
+		font-size: 0.7em;
 
 		p {
 			font-family: $sans-serif-font;
@@ -68,6 +67,7 @@ header.main {
 				padding: 10px 20px;
 				display: inline-block;
 				width: 100%;
+				height: 100%;
 				font-size: 0.8em;
 			}
 
@@ -97,9 +97,8 @@ header.main {
 	}	
 }
 
-@media screen and (min-width: $break-large) {
+@media screen and (min-width: $break-small) {
 	header.main {
-
 		nav {
 			width: 100%;
 			background-color: $dark-background-color;
@@ -116,6 +115,7 @@ header.main {
 				margin: 0;
 				text-align: center;
 				flex-grow: 1;
+				font-size: 0.9em;
 
 				border-top: none;
 				border-right: 1px solid #ffffff;
@@ -132,6 +132,25 @@ header.main {
 
 			}
 		}
+
+	}
+}
+
+@media screen and (min-width: $break-large) {
+	header.main {
+		background-color: $dark-background-color;
+
+		.container {
+			padding: 10px 0 15px;
+			width: 40em;
+		}
+
+		ul {
+			margin: 0 auto;
+			width: 40em;
+		}
+
+
 	}
 
 }
