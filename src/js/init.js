@@ -64,8 +64,8 @@ function init() {
 	$('.stories').scrollStory({
 		autoActivateFirstItem: false,
 		debug: false,
-		triggerOffset: 50,
-		scrollOffset: 50,
+		triggerOffset: 0,
+		scrollOffset: 0,
 		keyboard: true,
 		scrollSensitivity: 50,
 		containerscroll: function() {
