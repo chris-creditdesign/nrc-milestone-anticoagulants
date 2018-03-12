@@ -1,10 +1,14 @@
 const resizeCanvas = function(app) {
+
+	const height = document.getElementById("pixi-container").offsetHeight
 	
-	if ((window.innerWidth !== app.screen.width) || (window.innerHeight !== app.screen.height)) {
+	if ((window.innerWidth !== app.screen.width) || (height !== app.screen.height)) {
+		
 		app.renderer.resize(
 			window.innerWidth,
-			window.innerHeight
+			height
 		)
+
 
 		app.stage.children.filter( child => child.name === "back" || child.name === "front" || child.name === "white" )
 			.forEach( elem => {
