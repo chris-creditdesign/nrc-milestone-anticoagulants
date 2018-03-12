@@ -85,6 +85,7 @@ function init() {
   		},
   		containerinactive: function() {
 			timelineContainer.addClass("scrollstoryInactive")
+			console.log("Container is inactive")
   		}
 	})
 }
