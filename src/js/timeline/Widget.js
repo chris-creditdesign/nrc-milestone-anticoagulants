@@ -4,6 +4,7 @@ import buildAxis from './buildAxis'
 import buildLine from './buildLine'
 import buildMilestones from './buildMilestones'
 import updateSvg from './updateSvg'
+import hideTooltip from './hideTooltip'
 
 const Widget = (options) => {
 	return Object.assign(
@@ -13,6 +14,7 @@ const Widget = (options) => {
 			buildAxis,
 			buildLine,
 			buildMilestones,
+			hideTooltip,
 			updateSvg,
 			options
 		)

@@ -70,6 +70,7 @@ function init() {
 		scrollSensitivity: 50,
 		containerscroll: function() {
 			updateCanvas(app, this)
+			timeline && timeline.hideTooltip()
 		},
 		itemfocus: function(ev, item) {
 			timeline && timeline.buildMilestones(item.index)
@@ -85,7 +86,6 @@ function init() {
   		},
   		containerinactive: function() {
 			timelineContainer.addClass("scrollstoryInactive")
-			console.log("Container is inactive")
   		}
 	})
 }
