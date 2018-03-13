@@ -147,6 +147,7 @@ header.main {
 
 			.title-inner {
 				padding: 15px 15px 20px;
+				width: 60%;
 			}
 
 			h1 {
@@ -187,6 +188,12 @@ header.main {
 
 @media screen and (min-width: $break-large) {
 	header.main {
+
+		.title {
+			.title-inner {
+				width: 40%;
+			}
+		}
 
 
 		ul {
