@@ -1,5 +1,7 @@
 # Enhanced presentation for Nature Reviews Cardiology Milestone Anticoagulants
 
+Published online at [https://www.nature.com/collections/hbcnxgwklt/timeline/]()
+
 ## Install [webpack](https://webpack.js.org/) and dependencies:
 
 	npm install
