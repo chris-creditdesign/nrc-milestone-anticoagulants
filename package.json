@@ -36,7 +36,7 @@
     "json-loader": "^0.5.7",
     "modernizr": "^3.5.0",
     "modernizr-loader": "^1.0.1",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "postcss-load-config": "^1.2.0",
     "postcss-loader": "^2.0.9",
     "postcss-plugin": "^1.0.0",
