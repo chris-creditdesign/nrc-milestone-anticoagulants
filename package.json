@@ -20,7 +20,7 @@
   "author": "",
   "license": "UNLICENSED",
   "devDependencies": {
-    "ajv": "^5.5.0",
+    "ajv": "^6.12.3",
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
